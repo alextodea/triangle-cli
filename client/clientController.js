@@ -1,1 +1,3 @@
-// const {prompt} = require("inquirer"); 
+exports.inputHandler = (answers) => {
+    console.log(answers);
+};
