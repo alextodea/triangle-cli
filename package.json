@@ -23,6 +23,7 @@
   "homepage": "https://github.com/alextodea/triangle-cli#readme",
   "dependencies": {
     "commander": "^2.19.0",
-    "dotenv": "^6.2.0"
+    "dotenv": "^6.2.0",
+    "mongoose": "^5.4.3"
   }
 }
