@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/alextodea/triangle-cli/issues"
   },
-  "homepage": "https://github.com/alextodea/triangle-cli#readme"
+  "homepage": "https://github.com/alextodea/triangle-cli#readme",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
 }
