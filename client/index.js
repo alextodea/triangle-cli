@@ -1,7 +1,7 @@
 const program = require("commander");
 const {prompt} = require("inquirer");
-const {inputQuestions} = require("./clientForm");
-const {inputHandler} = require("./clientController");
+const {handleInput} = require("./clientController");
+const {questions} = require("./commandQuestions");
 
 program
     .version("1.0.0")
@@ -11,8 +11,8 @@ program
     .command("add")
     .alias("a")
     .description("Add triangle sides lengths")
-    .action(() => {
-        prompt(inputQuestions).then(answers => inputHandler(answers));
+    .action( () => {
+        prompt(questions).then(answers => handleInput(answers));
     });
 
 program.parse(process.argv);
