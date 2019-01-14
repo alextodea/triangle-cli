@@ -2,7 +2,7 @@ const program = require("commander");
 
 program
     .version("1.0.0")
-    .description("Application that determines the type of triangle")
+    .description("Application that determines a triangle type")
 
 addCommand();
 
