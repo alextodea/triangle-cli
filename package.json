@@ -1,0 +1,24 @@
+{
+  "name": "triangle-cli",
+  "version": "1.0.0",
+  "description": "A CLI application that determines the type of triangle, based on triangle sides length input.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alextodea/triangle-cli.git"
+  },
+  "keywords": [
+    "node.js",
+    "javascript",
+    "algortithms"
+  ],
+  "author": "Alexandru Todea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alextodea/triangle-cli/issues"
+  },
+  "homepage": "https://github.com/alextodea/triangle-cli#readme"
+}
