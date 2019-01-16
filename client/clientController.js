@@ -19,8 +19,9 @@ exports.handleInput = async (inputStringsObj) => {
             };
             
             // send post with input values and handle response from "backend"
-            rp(options).then(response => {
-                console.log(response);
+            rp(options).then(incomingResponse => {
+                console.log(incomingResponse.message);
+                process.exit();
             });
 
         } catch (err) {
