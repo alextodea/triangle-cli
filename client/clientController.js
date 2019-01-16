@@ -2,25 +2,26 @@ const serverUrl = "http://localhost:3000/calculator/triangle-type";
 const {checkIfObjValuesAreNumbers,checkTriangleInequality,postDetails} = require("./clientHelpers");
 const rp = require("request-promise");
 
-exports.handleInput = async (answersObj) => {
-        try {
-            
-            // Validation:
-            // 1. Check if input values format is correct
-            // 2. Check if triangle is valid based on triangle ineq. theorem
-            const inputNumbers = await checkIfObjValuesAreNumbers(answersObj);
-            await checkTriangleInequality(inputNumbers);
+exports.handleInput = async (inputStringsObj) => {
+        try {       
+            // Check if input values format is correct
+            const inputIntegersArray = await checkIfObjValuesAreNumbers(inputStringsObj);
+           
+            // Check if triangle is valid based on triangle inequality theorem
+            await checkTriangleInequality(inputIntegersArray);
             
             // post options
             const options = {
                 method: 'POST',
                 uri:serverUrl,
-                body:inputNumbers,
+                body:inputIntegersArray,
                 json: true
             };
             
             // send post with input values and handle response from "backend"
-            await rp(options);
+            rp(options).then(response => {
+                console.log(response);
+            });
 
         } catch (err) {
             console.error(err);

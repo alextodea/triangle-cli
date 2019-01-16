@@ -12,7 +12,7 @@ program
     .alias("a")
     .description("Add triangle sides lengths")
     .action( () => {
-        prompt(questions).then(answersObj => handleInput(answersObj));
+        prompt(questions).then(inputStringsObj => handleInput(inputStringsObj));
     });
 
 program.parse(process.argv);
