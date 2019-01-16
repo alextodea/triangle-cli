@@ -1,20 +1,21 @@
 // validation: check if input values are numbers
 exports.checkIfObjValuesAreNumbers = (obj) => {
     return new Promise((resolve,reject)=>{
-        const arrOfValues = Object.values(obj);
-        const containsNaN = arrOfValues.some(isNotANumber);
+        const valuesArr = Object.values(obj);
+        const intValuesArr = valuesArr.map(parseArrToInt);
+        const containsNaN = intValuesArr.some(isNaN);
+
         if (containsNaN) {
             reject("At least of the input values is not a number. Please try again and make sure you add only numbers!")
         } else {
-            resolve(arrOfValues);
+            resolve(intValuesArr);
         }
     });
 };
 
-// use custom isNaN function because default one treats empty string as nr.
-const isNotANumber = (n) => {
-    return isNaN(parseFloat(n));
-};
+parseArrToInt = (x => {
+    return parseInt(x);
+});
 
 // func used in addition with sort for ascending sorting
 const compareNumbers = (a, b) => {

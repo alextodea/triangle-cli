@@ -1,17 +1,17 @@
 exports.questions = [
     {
         type: "input",
-        name: "lengthAB",
+        name: "ab",
         message: "Add length of AB"
     },
     {
         type: "input",
-        name: "lengthBC",
+        name: "bc",
         message: "Add length of BC"
     },
     {
         type: "input",
-        name: "lengthCA",
+        name: "cd",
         message: "Add length of CA"
     }
 ];

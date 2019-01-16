@@ -15,7 +15,7 @@ exports.handleInput = async (answersObj) => {
             const options = {
                 method: 'POST',
                 uri:serverUrl,
-                body:answersObj,
+                body:inputNumbers,
                 json: true
             };
             
@@ -23,9 +23,7 @@ exports.handleInput = async (answersObj) => {
             await rp(options);
 
         } catch (err) {
-            if (err) {
-                console.error(err);
-                process.exit();
-            }
+            console.error(err);
+            process.exit();
         }
 };
