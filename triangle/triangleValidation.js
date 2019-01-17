@@ -1,7 +1,7 @@
 const Triangle = require("./Triangle");
 
 exports.getTypeOfTriangle = (obj) => {
-    return new Promise((resolve,reject)=> {
+    return new Promise((resolve)=> {
         const triangle = new Triangle(obj);
         const equilateral = triangle.isEquilateral();
         const isosceles = triangle.isIsosceles();

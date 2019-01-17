@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "A CLI application that determines the type of triangle, based on triangle sides length input.",
   "main": "server.js",
+  "preferGlobal": true,
+  "bin": "./client/index.js",
   "scripts": {
     "test": "test",
     "devstart": "nodemon ./server.js"
