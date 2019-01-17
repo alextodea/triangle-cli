@@ -25,5 +25,5 @@ else Scalene
 
 1. In order to set up the project, first change to its root location and run "npm install".
 2. Run "npm link" so that you can access the app be simply typing cust-cli in the shell. The executable expects a path to a javascript file to execute, and the location changes depending on where everyone stores the project on their file system.
-3. Run "npm devstart" or "node server" in order to start the server.
+3. Run "npm run devstart" or "node server" in order to start the server.
 4. Open a new console instance and run "triangle-cli add". You will be prompted to add the triangle lengths sides.
